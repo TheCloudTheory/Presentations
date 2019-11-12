@@ -1,0 +1,25 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+        {
+            "name": "cloudynademo7",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-04-01",
+            "sku": {
+                "name": "Standard_LRS"
+            },
+            "kind": "Storage",
+            "location": "westeurope"
+        },
+        {
+            "name": "cloudynademo7lock",
+            "type": "Microsoft.Authorization/locks",
+            "apiVersion": "2016-09-01",
+            "properties": {
+                "level": "ReadOnly",
+                "notes": "Cloudyna2019 demo lock"
+            }
+        }
+    ]
+}

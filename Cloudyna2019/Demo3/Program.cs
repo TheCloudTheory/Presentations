@@ -17,6 +17,8 @@ namespace Demo3
                             .WithRegion(Region.EuropeWest)
                             .WithExistingResourceGroup("cloudyna2019-euw-rg")
                             .Create();
+
+            Console.WriteLine($"Created storage account: {result.Name}");
         }
     }
 }
